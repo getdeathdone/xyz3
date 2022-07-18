@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {   
+    public int _heroSilverCoin;
+    public int _heroGoldCoin;
+    
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpSpeed;
     [SerializeField] private float _damageJumpSpeed;
-
-    [SerializeField] private GameObject _objectToCount;   
-    private int _countcoin;
 
     [SerializeField] private LayerCheck _groundCheck;
     private bool _isGrounded;
@@ -113,12 +113,6 @@ public class Hero : MonoBehaviour
     private bool IsGrounded()
         {   
             return _groundCheck.IsTouchingLayers;
-        }
-
-    public void CountObject()
-        {
-            _countcoin += 1;
-            Debug.Log(_countcoin);        
         }
 
     public void SaySomesthing()

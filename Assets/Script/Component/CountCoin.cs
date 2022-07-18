@@ -1,14 +1,18 @@
 using UnityEngine;
 
 public class CountCoin : MonoBehaviour
-{   
-    [SerializeField] private GameObject _objectToCount;
-    private int _count;
+{
+    [SerializeField] private Hero _hero;
 
-    public void CountObject ()
+    public void CountSilverCoin ()
     {
-        _count += 1;
-        Debug.Log(_count);        
+        _hero._heroSilverCoin += 1;
+        Debug.Log($"SilverCoin = "+_hero._heroSilverCoin);        
+    }
+    public void CountGoldCoin ()
+    {
+        _hero._heroGoldCoin += 1;
+        Debug.Log($"GoldCoin = "+_hero._heroGoldCoin);        
     }
 
 }
