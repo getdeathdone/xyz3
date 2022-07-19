@@ -14,5 +14,4 @@ public class CountCoin : MonoBehaviour
         _hero._heroGoldCoin += 1;
         Debug.Log($"GoldCoin = "+_hero._heroGoldCoin);        
     }
-
 }

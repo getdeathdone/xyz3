@@ -31,22 +31,26 @@ public class HeroInputReader : MonoBehaviour
       
         }   
     */
-            
-
+    
     public void OnMovement(InputAction.CallbackContext context)
+    {
+        var direction = context.ReadValue<Vector2>();
+        _hero.SetDirection(direction);
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if(context.canceled)
         {
-                var direction = context.ReadValue<Vector2>();
-                _hero.SetDirection(direction);
+            _hero.Interact();
         }
-
-
-
+    }
+    
     public void OnSaySomesthing(InputAction.CallbackContext context)
-        {   
-            if(context.canceled)
-                {
-                    _hero.SaySomesthing();
-                }
+    {   
+        if(context.canceled)
+        {
+            Debug.Log("Somesthing!");
         }
-
+    }
 }

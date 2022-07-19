@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System;
 
 [RequireComponent(typeof(SpriteRenderer))]
 
@@ -52,5 +49,4 @@ public class SpriteAnimatorTwo : MonoBehaviour
         _nextFrameTime += _secondsPerFrame;
         _currentSpriteIndex++; 
     }
-
 }
